@@ -1,4 +1,8 @@
-
+$shade3 : #A6A4AB
+$shade2 : #F0EDF7
+$shade1 : #68676B
+$shade4 : #666469
+$shade5 : #8D8B91
 .header
   color: red
   font-size: 4em
@@ -9,16 +13,36 @@ body
 
 .nav-bar 
   border: 1px solid #000
-  border-radius: 5px
   height: auto
+  margin: 0 auto
+  ul 
+    list-style: none;
+    margin: 0 auto
+    li
+      display: inline-block
 
 .nav-buttons 
-  padding: 2%
-  margin: 5px
+  padding: 10px
   display: inline-block
+  border-right: 1px solid black
   text-decoration: none
-  border-radius: 5px
   color: black
-  background-color: #999
+  background-color: $shade2
   &:hover
     background-color: grey
+
+.post
+  background-color: grey
+  padding: 10px, 0%, 10px, 0%
+  width: 70%
+  clear: both
+  margin: 0 auto
+  border: 1px solid black
+  border-radius: 5px
+  margin-top: 10px
+
+.text
+  padding-left: 20px
+  padding-top: 7px
+  padding-bottom: 7px
+  background-color: $shade2
