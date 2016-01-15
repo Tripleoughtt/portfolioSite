@@ -1,0 +1,27 @@
+.header {
+  color: red;
+  font-size: 4em;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.nav-bar {
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: auto;
+}
+
+.nav-buttons {
+  padding: 2%;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  color: black;
+  background-color: #999
+}
+
+.nav-buttons:hover {
+  background-color: grey;
+}
