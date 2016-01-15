@@ -27707,8 +27707,12 @@ $__System.register("102", ["3", "4", "6", "7", "8", "9", "101"], function (_expo
           value: function render() {
             return React.createElement(
               "div",
-              { className: "app" },
-              React.createElement(Markdown, { src: "./posts/newpost.md" })
+              null,
+              React.createElement(
+                "div",
+                { className: "postText" },
+                React.createElement(Markdown, { src: this.props.source })
+              )
             );
           }
         }]);
@@ -27721,8 +27725,39 @@ $__System.register("102", ["3", "4", "6", "7", "8", "9", "101"], function (_expo
   };
 });
 
-$__System.register("103", ["3", "6", "7", "8", "9", "102"], function (_export) {
-  var React, _get, _inherits, _createClass, _classCallCheck, Post, Blog;
+$__System.register("103", [], function (_export) {
+  "use strict";
+
+  var Data;
+  return {
+    setters: [],
+    execute: function () {
+      Data = {
+        "posts": [{
+          "title": "intro",
+          "date": "Thursday, January 14th, 2016",
+          "about": "This is the intro",
+          "path": "./posts/newpost.md"
+        }, {
+          "title": "Second",
+          "date": "Wednesday, January 13th, 2016",
+          "about": "This is th second post!",
+          "path": "./posts/post2.md"
+        }, {
+          "title": "Third",
+          "date": "Tuesday, January 12th, 2016",
+          "about": "This is the third post",
+          "path": "./posts/post3.md"
+        }]
+      };
+
+      _export("default", Data);
+    }
+  };
+});
+
+$__System.register("104", ["3", "6", "7", "8", "9", "102", "103"], function (_export) {
+  var React, _get, _inherits, _createClass, _classCallCheck, Post, Data, Blog;
 
   return {
     setters: [function (_5) {
@@ -27737,6 +27772,8 @@ $__System.register("103", ["3", "6", "7", "8", "9", "102"], function (_export) {
       _classCallCheck = _4["default"];
     }, function (_6) {
       Post = _6["default"];
+    }, function (_7) {
+      Data = _7["default"];
     }],
     execute: function () {
       "use strict";
@@ -27753,10 +27790,16 @@ $__System.register("103", ["3", "6", "7", "8", "9", "102"], function (_export) {
         _createClass(Blog, [{
           key: "render",
           value: function render() {
+            console.log(Data);
+            var posts = Data.posts.map(function (post) {
+              return React.createElement(Post, { title: post["title"], source: post['path'], date: post["date"], about: post['about'] });
+            });
+            console.log(posts);
             return React.createElement(
               "div",
               null,
-              React.createElement(Post, null)
+              posts,
+              React.createElement(Post, { source: "../../posts/newpost.md" })
             );
           }
         }]);
@@ -27769,7 +27812,7 @@ $__System.register("103", ["3", "6", "7", "8", "9", "102"], function (_export) {
   };
 });
 
-$__System.register('1', ['3', '4', '5', '40', '103', 'a'], function (_export) {
+$__System.register('1', ['3', '4', '5', '40', '104', 'a'], function (_export) {
   'use strict';
 
   var React, ReactDOM, Router, Route, Link, browserHistory, IndexRoute, Home, Blog, AppController;

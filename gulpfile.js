@@ -21,7 +21,7 @@ gulp.task('sass', ["clean", 'posts'], function(){
     .pipe(gulp.dest('./build/css'))
 });
 gulp.task('posts', function(){
-  gulp.src('./posts')
+  gulp.src('./posts/**/*')
     .pipe(gulp.dest('./build/posts'))
 })
 
