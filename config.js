@@ -19,8 +19,10 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@1.2.6",
     "react": "npm:react@0.14.6",
+    "react-addons-css-transition-group": "npm:react-addons-css-transition-group@0.14.6",
     "react-dom": "npm:react-dom@0.14.6",
     "react-markdown-to-html": "npm:react-markdown-to-html@1.0.11",
+    "react-motion": "npm:react-motion@0.3.1",
     "react-router": "npm:react-router@1.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -141,6 +143,9 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:performance-now@0.2.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
@@ -151,6 +156,13 @@ System.config({
     "npm:query-string@3.0.0": {
       "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
     },
+    "npm:raf@3.1.0": {
+      "performance-now": "npm:performance-now@0.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:react-addons-css-transition-group@0.14.6": {
+      "react": "npm:react@0.14.6"
+    },
     "npm:react-dom@0.14.6": {
       "react": "npm:react@0.14.6"
     },
@@ -158,6 +170,12 @@ System.config({
       "jquery": "npm:jquery@1.12.0",
       "lodash": "npm:lodash@3.10.1",
       "marked": "npm:marked@0.3.5",
+      "react": "npm:react@0.14.6"
+    },
+    "npm:react-motion@0.3.1": {
+      "performance-now": "npm:performance-now@0.2.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "raf": "npm:raf@3.1.0",
       "react": "npm:react@0.14.6"
     },
     "npm:react-router@1.0.3": {
