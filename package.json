@@ -20,6 +20,7 @@
   },
   "jspm": {
     "dependencies": {
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "react": "npm:react@^0.14.6",
       "react-dom": "npm:react-dom@^0.14.6",
       "react-markdown-to-html": "npm:react-markdown-to-html@^1.0.11",

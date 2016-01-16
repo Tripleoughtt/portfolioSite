@@ -42,13 +42,13 @@ $__System.register("2", ["3", "4", "5", "6", "7", "8", "9"], function (_export) 
           value: function render() {
             return React.createElement(
               "div",
-              { className: "nav-bar" },
+              { className: "navBar" },
               React.createElement(
                 "ul",
                 null,
                 React.createElement(
                   "li",
-                  null,
+                  { className: "tab" },
                   React.createElement(
                     Link,
                     { role: "button", className: "btn nav-buttons", to: "blog" },
@@ -57,7 +57,7 @@ $__System.register("2", ["3", "4", "5", "6", "7", "8", "9"], function (_export) 
                 ),
                 React.createElement(
                   "li",
-                  null,
+                  { className: "nav-tab" },
                   React.createElement(
                     Link,
                     { role: "button", className: "btn nav-buttons", to: "/" },
@@ -220,15 +220,33 @@ $__System.register("c", ["3", "4", "5", "6", "7", "8", "9", "d"], function (_exp
           key: "render",
           value: function render() {
             return React.createElement(
-              Link,
-              { to: "" + this.props.source },
+              "div",
+              { className: "post" },
               React.createElement(
                 "div",
-                { className: "post" },
+                { className: "postHead row" },
                 React.createElement(
-                  "div",
-                  { className: "text" },
-                  React.createElement(Markdown, { src: "./posts/" + this.props.source })
+                  Link,
+                  { className: "link", to: "" + this.props.source },
+                  React.createElement(
+                    "h1",
+                    { className: "col-sm-8 col-xs-12 title" },
+                    this.props.title
+                  )
+                ),
+                React.createElement(
+                  "h1",
+                  { className: "col-sm-4 col-xs-12 date" },
+                  this.props.date
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "about" },
+                React.createElement(
+                  "span",
+                  null,
+                  this.props.about
                 )
               )
             );
@@ -27926,7 +27944,7 @@ $__System.register('1', ['3', '4', '5', '105', 'a', 'b', 'f'], function (_export
           { component: AppController, path: '/' },
           React.createElement(IndexRoute, { component: Home }),
           React.createElement(Route, { path: 'blog', component: Blog }),
-          React.createElement(Route, { path: '/:post', component: postPage })
+          React.createElement(Route, { path: ':post', component: postPage })
         )
       ), document.getElementById('react'));
     }
