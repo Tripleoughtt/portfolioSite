@@ -22,8 +22,10 @@
     "dependencies": {
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "react": "npm:react@^0.14.6",
+      "react-addons-css-transition-group": "npm:react-addons-css-transition-group@^0.14.6",
       "react-dom": "npm:react-dom@^0.14.6",
       "react-markdown-to-html": "npm:react-markdown-to-html@^1.0.11",
+      "react-motion": "npm:react-motion@^0.3.1",
       "react-router": "npm:react-router@^1.0.3"
     },
     "devDependencies": {

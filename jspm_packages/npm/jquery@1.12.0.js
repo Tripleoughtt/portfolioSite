@@ -1,0 +1,1 @@
+module.exports = require("npm:jquery@1.12.0/dist/jquery.js");

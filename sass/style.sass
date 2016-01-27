@@ -4,25 +4,50 @@ $shade1 : #68676B
 $shade4 : #666469
 $shade5 : #8D8B91
 
+$screenSM : 768px
+
 
 body
-  font-family: "Trebuchet MS", Helvetica, sans-serif
-  color: white
+  font-family: "Dosis", sans-serif
+  color: rgba(255,255,255, 0.8)
   width: 100vw
   height: 100vh
-
-.wrapper
   background: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .4)) , url("../../imageedit_2_9814965393.jpg") center center no-repeat 
   background-size: cover
+  background-attachment: fixed
   background-blend-mode: normal
   height: 100vh
   width: 100vw
 
+.projectWrapper
+  background-color: rgba(127,140,141, 0.3)
+  margin-top: 20px
+  margin-bottom: 20px
+  border: 1px solid black
+  border-radius: 7px
+
+
+.projectThumbnail
+  width: 33vw
+  height: 33vw
 
 .background
   width: 100vw
   height: 100vh
   z-index: -30
+
+.cardText
+  @media screen and (max-width: $screenSM) 
+    font-size: 1.0em 
+  @media screen and (min-width: $screenSM)
+    font-size: 1.8em
+
+.cardAbout
+  display: inline-block
+  margin-right: 20px
+  margin-bottom: 3px
+
+
 
 
 
@@ -38,6 +63,13 @@ body
       display: inline-block
       
 
+.slideIn-appear 
+  opacity: 0.01
+
+.slideIn-appear-active
+  opacity: 0.6
+  transition: all 1.1s ease-in
+
 .date
   font-size: 1.3em
 
@@ -49,18 +81,50 @@ body
   font-size: 2em
   text-decoration: none
 
-.nav-buttons 
-  padding: 10px
-  display: inline-block
-  border-right: 1px solid black
+.nav-buttons
   text-decoration: none
   color: white
-  background-color: $shade2
+  margin-left: 10px
+  margin-right: 10px
+  height: 4vh
+  @media screen and (max-width: $screenSM) 
+    font-size: 1.2em 
+  @media screen and (min-width: $screenSM)
+    font-size: 1.8em
+
+
+
+.name
+  text-align: center
+  margin-right: 5%
+  @media screen and (max-width: $screenSM) 
+    font-size: 1.5em 
+  @media screen and (min-width: $screenSM)
+    font-size: 2.5em
+  
+
+.homeCard
+  border-radius: 7px
+  margin:  auto
+  margin-top: 25vh
+  height: auto
+  width: 55vw
+
+
+
+.tab 
+  padding: 10px
+  display: inline-block
+  text-decoration: none
+  color: white
+  border-right: 2px solid white
+  &:last-child
+    border-right: 0px
   &:hover
-    background-color: grey
+    background-color: black
 
 .post
-  background-color: rgba(80,80,80, 0.7)
+  background-color: rgba(127,140,141, 0.3)
   height: 25vh
 
   padding: 10px, 0%, 10px, 0%
@@ -77,3 +141,5 @@ body
   padding-bottom: 7px
   color: white
   background-color: $shade2
+
+
