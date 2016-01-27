@@ -10,13 +10,29 @@ body {
   height: 100vh;
   width: 100vw; }
 
+.projectWrapper {
+  background-color: rgba(127, 140, 141, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 7px; }
+
+.projectThumbnail {
+  width: 33vw;
+  height: 33vw; }
+
 .background {
   width: 100vw;
   height: 100vh;
   z-index: -30; }
 
-.cardText {
-  font-size: 2em; }
+@media screen and (max-width: 768px) {
+  .cardText {
+    font-size: 1.0em; } }
+
+@media screen and (min-width: 768px) {
+  .cardText {
+    font-size: 1.8em; } }
 
 .cardAbout {
   display: inline-block;
@@ -55,21 +71,32 @@ body {
 .nav-buttons {
   text-decoration: none;
   color: white;
-  font-size: 1.8em;
   margin-left: 10px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  height: 4vh; }
+  @media screen and (max-width: 768px) {
+    .nav-buttons {
+      font-size: 1.2em; } }
+  @media screen and (min-width: 768px) {
+    .nav-buttons {
+      font-size: 1.8em; } }
 
 .name {
   text-align: center;
-  font-size: 3em;
   margin-right: 5%; }
+  @media screen and (max-width: 768px) {
+    .name {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 768px) {
+    .name {
+      font-size: 2.5em; } }
 
 .homeCard {
   border-radius: 7px;
   margin: auto;
   margin-top: 25vh;
-  height: 40vh;
-  width: 40vw; }
+  height: auto;
+  width: 55vw; }
 
 .tab {
   padding: 10px;
@@ -83,7 +110,7 @@ body {
     background-color: black; }
 
 .post {
-  background-color: rgba(127, 140, 141, 0.7);
+  background-color: rgba(127, 140, 141, 0.3);
   height: 25vh;
   padding: 10px, 0%, 10px, 0%;
   width: 70%;
