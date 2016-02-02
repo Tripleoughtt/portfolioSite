@@ -1,1 +1,1 @@
-module.exports = require("npm:raf@3.1.0/index.js");
+module.exports = require("npm:raf@3.1.0/index");
