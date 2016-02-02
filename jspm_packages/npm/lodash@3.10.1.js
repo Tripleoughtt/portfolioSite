@@ -1,1 +1,1 @@
-module.exports = require("npm:lodash@3.10.1/index.js");
+module.exports = require("npm:lodash@3.10.1/index");

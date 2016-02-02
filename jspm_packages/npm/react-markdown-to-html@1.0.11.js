@@ -1,1 +1,1 @@
-module.exports = require("npm:react-markdown-to-html@1.0.11/index.js");
+module.exports = require("npm:react-markdown-to-html@1.0.11/index");
